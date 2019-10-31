@@ -13,6 +13,8 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     
+    @IBOutlet var hungerLevel: WKInterfaceLabel!
+    @IBOutlet var currentLife: WKInterfaceLabel!
     // MARK: Outlets
     // ---------------------
     @IBOutlet var messageLabel: WKInterfaceLabel!
@@ -94,40 +96,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("caterpie is selected")
         }
     }
-    /*
-     func catMovement(direction:String){
-     if(direction == "left")
-     {
-     print("TAP LEFT")
-     // 2. person clicked left, so move cat left
-     cat.position = CGPoint(x:self.size.width*0.25, y:100)
-     
-     // change the cat's direction
-     let facingRight = SKAction.scaleX(to: 1, duration: 0)
-     self.cat.run(facingRight)
-     
-     // save cat's position
-     self.catPosition = "left"
-     // animation code call
-     animation()
-     }
-     else if(direction == "right"){
-     print("TAP RIGHT")
-     // 2. person clicked right, so move cat right
-     cat.position = CGPoint(x:self.size.width*0.85, y:100)
-     
-     // change the cat's direction
-     let facingLeft = SKAction.scaleX(to: -1, duration: 0)
-     self.cat.run(facingLeft)
-     
-     // save cat's position
-     self.catPosition = "right"
-     }
-     
-     }
-     
-     */
     
+
     // MARK: Functions for Pokemon Parenting
     @IBAction func nameButtonPressed() {
         print("name button pressed")
@@ -145,4 +115,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("Hibernate button pressed")
     }
 
+    @IBAction func feedPokemon() {
+    }
 }
